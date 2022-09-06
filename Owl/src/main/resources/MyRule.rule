@@ -1,0 +1,9 @@
+@prefix wt: <http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#>
+[rule1:(?a wt:isFatherOf ?b)(?b wt:isFatherOf ?c)->(?a wt:isGrandFatherOf ?c)]
+[rule2:(?a wt:isFatherOf ?b)(?b wt:isMotherOf ?c)->(?a wt:isGrandFatherOf ?c)]
+[rule3:(?a wt:isMotherOf ?b)(?b wt:isFatherOf ?c)->(?a wt:isGrandMotherOf ?c)]
+[rule4:(?a wt:isMotherOf ?b)(?b wt:isMotherOf ?c)->(?a wt:isGrandMotherOf ?c)]
+[rule5:(?a wt:isSonOf ?b)(?b wt:isSonOf ?c)->(?a wt:isGrandSonOf ?c)]
+[rule6:(?a wt:isSonOf ?b)(?b wt:isDaughterOf ?c)->(?a wt:isGrandSonOf ?c)]
+[rule7:(?a wt:isDaughterOf ?b)(?b wt:isSonOf ?c)->(?a wt:isGrandDaughterOf ?c)]
+[rule8:(?a wt:isDaughterOf ?b)(?b wt:isDaughterOf ?c)->(?a wt:isGrandDaughterOf ?c)]

@@ -1,0 +1,354 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#"
+     xml:base="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-14="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isDaughterOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isDaughterOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isFatherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isFatherOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isHusbandOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isHusbandOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isMotherOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isMotherOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isSonOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isSonOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isWifeOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#isWifeOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>famale</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>male</rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Alice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Alice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Allen"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary"/>
+        <isWifeOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Bob"/>
+        <Gender>famale</Gender>
+        <Name>Alice</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Allen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Allen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Zara"/>
+        <isHusbandOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Vanus"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Alice"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Bob"/>
+        <Gender>male</Gender>
+        <Name>Allen</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Bob -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Bob">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Allen"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary"/>
+        <isHusbandOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Alice"/>
+        <Gender>male</Gender>
+        <Name>Bob</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Claire -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Claire">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Lara"/>
+        <isWifeOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#David"/>
+        <Gender>famale</Gender>
+        <Name>Claire</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#David -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#David">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Lara"/>
+        <isHusbandOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Claire"/>
+        <Gender>male</Gender>
+        <Name>David</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Edward -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Edward">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary"/>
+        <Gender>male</Gender>
+        <Name>Edward</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Edward"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Wanda"/>
+        <isHusbandOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Claire"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#David"/>
+        <Gender>male</Gender>
+        <Name>Hans</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Lara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Lara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Claire"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#David"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Yan"/>
+        <isWifeOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Oscar"/>
+        <Gender>famale</Gender>
+        <Name>Lara</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Alice"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Bob"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Edward"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Wanda"/>
+        <isWifeOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans"/>
+        <Gender>famale</Gender>
+        <Name>Mary</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Oscar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Oscar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isFatherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Yan"/>
+        <isHusbandOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Lara"/>
+        <Gender>male</Gender>
+        <Name>Oscar</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Vanus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Vanus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isMotherOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Zara"/>
+        <isWifeOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Allen"/>
+        <Gender>famale</Gender>
+        <Name>Vanus</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Wanda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Wanda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Hans"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Mary"/>
+        <Gender>famale</Gender>
+        <Name>Wanda</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Yan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Yan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Man"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Lara"/>
+        <isSonOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Oscar"/>
+        <Gender>male</Gender>
+        <Name>Yan</Name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Zara -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Zara">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Woman"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Allen"/>
+        <isDaughterOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-14#Vanus"/>
+        <Gender>famale</Gender>
+        <Name>Zara</Name>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

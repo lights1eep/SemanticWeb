@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courses>
+    <course name="高级语言程序设计">
+<!--        <teacher>张三</teacher>-->
+        <room>三教302</room>
+        <publication>《C语言程序设计》</publication>
+    </course>
+    <course name="数据结构">
+        <teacher>李四</teacher>
+        <room>东教112</room>
+        <publication>《数据结构(C++版)》</publication>
+    </course>
+    <course name="算法设计">
+        <teacher>王五</teacher>
+        <room>三教106</room>
+        <publication>《算法导论》</publication>
+    </course>
+    <course name="计算机网络">
+        <teacher>赵六</teacher>
+        <room>三教404</room>
+        <publication>《计算机网络设计》</publication>
+    </course>
+    <course name="计算机组成原理">
+        <teacher>钱七</teacher>
+        <room>四教302</room>
+        <publication>《深入理解计算机体系结构》</publication>
+    </course>
+    <course name="操作系统">
+        <teacher>王五</teacher>
+        <room>三教214</room>
+        <publication>《操作系统》</publication>
+    </course>
+    <course name="高等数学">
+        <teacher>周九</teacher>
+        <room>四教306</room>
+        <publication>《高等数学》</publication>
+    </course>
+    <course name="编译原理">
+        <teacher>吴十</teacher>
+        <room>三教411</room>
+        <publication>《编译原理》</publication>
+    </course>
+    <course name="大学英语">
+        <teacher>郑十一</teacher>
+        <room>三教106</room>
+        <publication>《高级学术英语》</publication>
+    </course>
+    <course name="太极">
+        <teacher>钟十二</teacher>
+        <room>东校区操场</room>
+    </course>
+</courses>
+
+

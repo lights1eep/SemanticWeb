@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="index.xsl"?>
+<courses>
+<course name="操作系统">
+        <teacher>王五</teacher>
+        <room>三教214</room>
+        <publication>《操作系统》</publication>
+    </course>
+</courses>

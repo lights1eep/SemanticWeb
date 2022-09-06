@@ -1,0 +1,467 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#"
+     xml:base="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-11="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#hasJobTitle -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#hasJobTitle">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#isTaughtBy -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#isTaughtBy">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teach"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <rdfs:comment>课程被教师教授</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#study -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#study">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:comment>学生学习课程</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teach -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teach">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:comment>教师教授课程</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:comment>教师 教授 课程</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#class -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#class">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#courseBook -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#courseBook">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>教材</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#courseId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#courseId">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>课程id</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#courseName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#courseName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>课程名</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#coursePlace -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#coursePlace">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>教学地点</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#personAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#personAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>年龄</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#personID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#personID">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>人id</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#personName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#personName">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>人名</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#salary -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#salary">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:comment>薪水</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#title -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#title">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>职称</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#AssociateProfessor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#AssociateProfessor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+        <rdfs:comment>副教授</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Lecturer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Lecturer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+        <rdfs:comment>讲师</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Professor -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Professor">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#JobTitle"/>
+        <rdfs:comment>教授</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <rdfs:comment>学生</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Person"/>
+        <rdfs:comment>教师</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#associateProfessor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#associateProfessor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#AssociateProfessor"/>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15000</salary>
+        <title>副教授</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <isTaughtBy rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher2"/>
+        <courseBook>C语言精华版</courseBook>
+        <courseId>cou32143</courseId>
+        <courseName>C语言</courseName>
+        <coursePlace>三教201</coursePlace>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <isTaughtBy rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher3"/>
+        <courseBook>操作系统第五版</courseBook>
+        <courseId>cou32431</courseId>
+        <courseName>操作系统</courseName>
+        <coursePlace>四教221</coursePlace>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Course"/>
+        <isTaughtBy rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher1"/>
+        <courseBook>知识图谱第六版</courseBook>
+        <courseId>cou25432</courseId>
+        <courseName>语义web</courseName>
+        <coursePlace>东教301</coursePlace>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#lecturer -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#lecturer">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Lecturer"/>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10000</salary>
+        <title>讲师</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#professor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#professor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Professor"/>
+        <salary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</salary>
+        <title>教授</title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student"/>
+        <study rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course1"/>
+        <study rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course3"/>
+        <class>计算机1班</class>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</personAge>
+        <personID>stu32142</personID>
+        <personName>李一</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student"/>
+        <study rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course1"/>
+        <class>计算机2班</class>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</personAge>
+        <personID>stu54323</personID>
+        <personName>吴二</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student"/>
+        <study rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course2"/>
+        <study rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course3"/>
+        <class>计算机3班</class>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</personAge>
+        <personID>stu23412</personID>
+        <personName>田七</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#student4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Student"/>
+        <study rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course3"/>
+        <class>计算机4班</class>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</personAge>
+        <personID>stu56432</personID>
+        <personName>黄九</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <hasJobTitle rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#professor"/>
+        <teach rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course3"/>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</personAge>
+        <personID>tea12345</personID>
+        <personName>张三</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <hasJobTitle rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#associateProfessor"/>
+        <teach rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course1"/>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">37</personAge>
+        <personID>tea32142</personID>
+        <personName>李四</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#teacher3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Teacher"/>
+        <hasJobTitle rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#lecturer"/>
+        <teach rdf:resource="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#course2"/>
+        <personAge rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</personAge>
+        <personID>tea21321</personID>
+        <personName>王五</personName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#AssociateProfessor"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Lecturer"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/10265/ontologies/2021/11/untitled-ontology-11#Professor"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
